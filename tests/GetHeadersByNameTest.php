@@ -17,7 +17,7 @@ class GetHeadersByNameTest extends TestCase {
         
         $instance = new source\request\GetHeadersByName;
         
-        $this->assertNotFalse($instance->getData($valueArray, $valueName));
+        //$this->assertNotFalse($instance->getData($valueArray, $valueName));
         $this->assertEquals($expect, $instance->getData($valueArray, $valueName));
         
     }
@@ -37,8 +37,8 @@ class GetHeadersByNameTest extends TestCase {
             ],
             'case_2' => [
                 'valueArray' => ['Connection: Keep-Alive','Server: Nginx', 'Content-type :text/pdf'],
-                'valueName' => 'content',
-                'expect' => 'Content-type :text/pdf'
+                'valueName' => 'time',
+                'expect' => false
             ],
         ];
     }

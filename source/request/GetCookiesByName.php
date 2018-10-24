@@ -6,7 +6,7 @@ require_once 'source/request/interfaces/GetDataByName.php';
 
 use source\request\intefaces\GetDataByName;
 
-class GetCookiesByName implements GetDataByName{
+class GetCookiesByName implements GetDataByName {
     
     /**
      * Find Cookies by name

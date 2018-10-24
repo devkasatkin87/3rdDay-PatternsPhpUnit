@@ -14,15 +14,17 @@ class GetHeadersByName implements GetDataByName {
      * @param array $headers
      * @param string $name 
      * 
-     * @return array || bool
+     * @return string || bool
      */
-    public function getData(array $headers, string $name) {
-        
+    public function getData(array $headers, $name) {
+            
+            $result = '';
+            
             foreach ($headers as $header){
                 
-                if (stristr($header, $name)){
+                if ($result = stristr($header, $name)){
                     
-                    return stristr($header, $name);
+                    return $result;
                 }
             }
         return false;

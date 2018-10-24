@@ -78,7 +78,7 @@ class RequestEntity {
      * @param string $name
      * @return array || bool
      */
-    public function getDataByName(intefaces\GetDataByName $method, array $data,string $name){
+    public function getDataByName(intefaces\GetDataByName $method, array $data, $name){
         
         return $method->getData($data, $name);
     }
