@@ -4,7 +4,6 @@ namespace source\request;
 
 require_once __DIR__.'/interfaces/GetDataByName.php';
 
-//use intefaces\GetDataByName;
 
 class RequestEntity {
     

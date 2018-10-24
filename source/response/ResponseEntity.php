@@ -16,6 +16,7 @@ class ResponseEntity {
 
 
     public function __construct(int $code, array $headers, array $cookies, string $content, sendingMethods $sendData) {
+        
         $this->code = $code;
         $this->headers = $headers;
         $this->cookies = $cookies;
@@ -107,6 +108,8 @@ class ResponseEntity {
         $this->sendData->sendCode($code);
         $this->sendData->sendCookies($cookies, $timeExpire);
         $this->sendData->sendHeaders($headers);
+        
+        return true;
     }
     
     /**
@@ -115,7 +118,7 @@ class ResponseEntity {
      */
     public function viewContent(){
         
-        $this->sendData->viewContent($this->content);
+        return $this->sendData->viewContent($this->content);
     }
     
 }
